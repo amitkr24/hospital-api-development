@@ -8,7 +8,7 @@ let opts = {
 }
 
 passport.use(new JwtStrategy(opts, function(jwtPayLoad, done) {
-    Doctor.findById(jwtPayLoad._id, function(err, doctor) {
+    Doctor.findById(jwtPayLoad._id, function(err, doctor){
         if(err) {
             //if error occured
             console.log('Error in finding user --> Passport JWT');

@@ -1,10 +1,10 @@
-const Doctor  = require('../model/doctor'); //Doctor model
-
+const jwt    = require('jsonwebtoken'); //used to decode jwt token
+const Doctor = require('../model/doctor'); //Doctor model
 
 module.exports.CreateDoctor = async function (req, res) {
     try {
         let doctor = await Doctor.findOne({ email: req.body.email }); //checking if doctor alreadr exists
-        if (doctor) {
+        if (doctor){
             //if doctor exists
             return res.json(409, {
                 message: 'Doctor already exists!'
@@ -18,6 +18,7 @@ module.exports.CreateDoctor = async function (req, res) {
     } catch {
         //catching errors
         console.log('Internal server error!!');
+        
         return res.json(500, {
             message: 'Internal Server Error'
         })
