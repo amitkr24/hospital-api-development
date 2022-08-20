@@ -15,6 +15,7 @@ const PatientSchema = mongoose.Schema({
         min: 1000000000,
         max: 9999999999
     },
+    
     //age of the patient
     age: {
         type: Number,
@@ -23,10 +24,13 @@ const PatientSchema = mongoose.Schema({
         max: 150
     },
 
-    //sex of the patient
-    sex: {
+    //gender of the patient
+    gender: {
         type: String,
         enum: ['Male', 'Female', 'Others'],
         required: true
     },
 });
+
+const Patient = mongoose.model('Patient', PatientSchema); //modelling the schema
+module.exports = Patient;

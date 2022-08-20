@@ -3,7 +3,7 @@ const Doctor = require('../model/doctor'); //Doctor model
 
 module.exports.CreateDoctor = async function (req, res) {
     try {
-        let doctor = await Doctor.findOne({ email: req.body.email }); //checking if doctor alreadr exists
+        let doctor = await Doctor.findOne({ email: req.body.email }); //checking if doctor already exists
         if (doctor){
             //if doctor exists
             return res.json(409, {
