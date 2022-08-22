@@ -12,24 +12,16 @@ const PatientSchema = mongoose.Schema({
         type: Number,
         unique: true,
         required: true,
-        min: 1000000000,
-        max: 9999999999
-    },
-    
-    //age of the patient
-    age: {
-        type: Number,
-        required: true,
-        min: 0,
-        max: 150
+        maxlength: 10
     },
 
     //gender of the patient
-    gender: {
-        type: String,
-        enum: ['Male', 'Female', 'Others'],
-        required: true
-    },
+    reports:[{
+        type:  mongoose.Schema.Types.ObjectId,
+        ref: "Report"
+    }]
+},{
+    timestamps: true
 });
 
 const Patient = mongoose.model('Patient', PatientSchema); //modelling the schema
