@@ -41,13 +41,13 @@ module.exports.register = async function(req, res){
         }
         else{
             return res.status(500).json({
-                message: 'OOPS!! error'
+                message: ' error !!!'
             });
         }
     }
     catch(err){
         return res.status(500).json({
-            message: 'OOPS!! error'
+            message: 'Internal Server Error'
         });
     }
 }

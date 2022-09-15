@@ -13,7 +13,11 @@ module.exports.CreateDoctor = async function (req, res) {
         } else {
             doctor = await Doctor.create(req.body); //creating a new doctor account
             return res.json(201, {
-                message: 'Doctor created successfully!'
+                message: 'Doctor created successfully!',
+                data: {
+                    doctor:doctor,
+                    
+                }
             })
         }
     } catch {
