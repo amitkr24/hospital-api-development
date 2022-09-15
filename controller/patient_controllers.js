@@ -3,6 +3,7 @@ const Patient = require('../model/patient'); //Patient model
 const Doctor  = require('../model/doctor'); //Doctor model
 const Report  = require('../model/reports'); //Doctor model
 
+//status added
 const status_arr = ["Negative", "Travelled-Quarantine", "Symptoms-Quarantine", "Positive-Admit"];
 
 //Register a patient using name,phone and password
@@ -119,7 +120,6 @@ module.exports.reportCreate = async function(req,res){
 
 //fetchall reports of a patient 
 module.exports.reportList = async function(req, res){
-    console.log('enter');
     try{
         let report=await Report.find({ patient:req.params.id }).sort("createdAt").populate('doctor').populate('patient');
         

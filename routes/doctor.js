@@ -1,7 +1,7 @@
 const express           = require('express');
 const router            = express.Router();
 const jwt               = require('jsonwebtoken'); //used to decode jwt token
-const DoctorController  = require('../controller/doctor_controllers');
+const DoctorController  = require('../controller/doctor_controllers'); // doctor controller added
 
 console.log('doctor route loading');
 

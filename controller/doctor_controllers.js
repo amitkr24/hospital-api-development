@@ -1,6 +1,7 @@
 const jwt    = require('jsonwebtoken'); //used to decode jwt token
 const Doctor = require('../model/doctor'); //Doctor model
 
+// create doctor 
 module.exports.CreateDoctor = async function (req, res) {
     try {
         let doctor = await Doctor.findOne({ email: req.body.email }); //checking if doctor already exists
@@ -25,6 +26,7 @@ module.exports.CreateDoctor = async function (req, res) {
     }
 }
 
+//doctor login
 module.exports.DoctorLogin = async function(req,res){
     try{
         //finding doctor 
@@ -40,7 +42,7 @@ module.exports.DoctorLogin = async function(req,res){
             message: 'Login successfull, JWT token sen\'t successfully, please keep it safe!',
             data: {
                 //creating the new jwt token
-                token: jwt.sign(doctor.toJSON(), 'PaOpZvKmDVqtVwaUWLBvia9X5qNMaSNp', { expiresIn: '7200000' })
+                token: jwt.sign(doctor.toJSON(), 'NMaSNppZvKmDVqtVwaUWLBviPaO5qa9X', { expiresIn: '7200000' })
             }
         })
 
