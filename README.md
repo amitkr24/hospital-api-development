@@ -16,7 +16,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd Hospital-API-For-Covid-19
+  cd hospital-api-development
 ```
 
 Install dependencies
