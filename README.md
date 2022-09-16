@@ -49,10 +49,10 @@ Data that needs to be sent with a route :
     
     a. /doctors/register - name, email, password (Form type:x-www-form-urlencoded)
     b. /doctors/login - email, password (Form type:x-www-form-urlencoded).
-    c. /patients/register - JWT Token (In Headers), name, phone, age (Form type:x-www-form-urlencoded).
-    d. /patients/:id/create_report - JWT Token (In Headers), Patient's ID (params), status (Form type:x-www-form-urlencoded).
-    e. /patients/:id/reports - JWT Token (In Headers), Patient's ID (params).
-    f. /reports/:status - JWT Token (In Headers), status (params).
+    c. /patients/register - JWT Token (In Authorization ->choose bearer token & enter valid token), name, phone, age (Form type:x-www-form-urlencoded).
+    d. /patients/:id/create_report - JWT Token (In Authorization ->choose bearer token & enter valid token), Patient's ID , status (Form type:x-www-form-urlencoded).
+    e. /patients/:id/reports - JWT Token (In Authorization ->choose bearer token & enter valid token), Patient's ID.
+    f. /reports/:status - JWT Token (In Authorization ->choose bearer token & enter valid token), status.
 
 Folder Structure
 

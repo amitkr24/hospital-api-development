@@ -11,7 +11,7 @@ module.exports.filterReport = async function(req, res){
         
         return res.status(200).json({
             data:{
-                    report
+                report
             },
             message:'All reports of the patient',
           //details:report
