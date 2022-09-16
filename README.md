@@ -34,7 +34,7 @@ Start the server
   
 ## Documentation
 
-Root Hosted Link - https://hospital-api-cc.herokuapp.com/
+Root Hosted Link - https://hospital-api-development.onrender.com/
 
 Routes :
 

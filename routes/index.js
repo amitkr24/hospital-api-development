@@ -5,7 +5,7 @@ const router  = express.Router();
 console.log('router added');
 router.get('/', function(req, res) {
     return res.json(400, {
-        message: 'Please request the correct routes! Check "https://github.com/amitkr24/hospital-api-development/blob/main/README.md" for documentation.'
+        message: 'Please request the correct routes! Check "https://github.com/amitkr24/hospital-api-development/blob/master/README.md" for documentation.'
     }
 )});
 router.use('/doctors', require('./doctor')); //routes to all doctors reuqest
